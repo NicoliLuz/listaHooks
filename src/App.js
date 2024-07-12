@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+/*importando o forms*/
+import ClearableInput from './components/ClearableInput';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/*importando o relógio*/
+import RealTimeClock from './components/RealTimeClock';
 
+/*importando realizador de cálculo*/
+import FactorialCalculator from './components/FactorialCalculator';
+
+/*importando a lista*/
+import ToDoList from './components/ToDoList';
+
+const App = () => {
+ return (
+  <>
+    <h2>Limpar o Campo / Clearable Input</h2>
+    <ClearableInput />
+  
+    <h2>Tempo Real / Real Time Clock </h2>
+    <RealTimeClock />
+
+    <h2>Calcule o Fatorial</h2>
+    <FactorialCalculator />
+
+    <h2>Lista de Tarefas</h2>
+    <ToDoList />
+  </>
+      
+  )
+};
 export default App;
